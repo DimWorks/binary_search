@@ -7,9 +7,7 @@ int binary_search(vector<int> data, int element)
 {
 	int low = 0, high = data.size(), item, steps = 0;
 
-	int size = high;
-
-	while (high <= size && steps <= size)
+	while (high >= low)
 	{
 		int middle = (low + high) / 2;
 		
@@ -27,7 +25,6 @@ int binary_search(vector<int> data, int element)
 		{
 			low = middle + 1;
 		}
-		steps++;
 	}
 
 	return NULL;
